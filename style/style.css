@@ -648,7 +648,7 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 20px 20px;
-    display: flex;
+    display: none;
 }
 .work__title {
     display: flex;
@@ -662,42 +662,85 @@ body {
     color: var(--color-warning-darken);
 }
 .work__title-description {
-
+    font-family: var(--font-family-title);
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--color-gray-100);
 }
 .work__separator {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    position: relative;
 }
 .work__separator-line {
-
+    position: absolute;
+    margin: 0px auto;
+    width: 40%;
+    height: 1px;
+    background-image: linear-gradient(to right , #80808000, #ffc107,#80808000);
 }
 .work__separator-bold {
-
+    position: absolute;
+    margin: 0px auto;
+    width: 10%;
+    height: 3px;
+    background-color: #ffc107;
+    border-radius: 3px;
 }
 .work__cards {
-
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-top: 5px;
+    width: 100%;
 }
 .workCard {
-
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 .workCard__image {
-
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .workCard__image-img {
-    
+    width: 100%;
 }
 .workCard__title {
-
+    text-align: justify;
+    /* margin-bottom: 10px; */
+    margin-top: 10px;
 }
 .workCard__title-text {
-
+    font-family: var(--font-family-title);
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--color-yellow-darken);
+    cursor: pointer;
 }
 .workCard__description {
-
+    width: 100%;
+    text-align: justify;
+    margin-bottom: 10px;
 }
 .workCard__description-text {
-
+    font-family: var(--font-family-text);
+    font-size: 1.4rem;
+    line-height: 3rem;
+    font-weight: 300;
+    color: var(--color-gray-500);
 }
 
+/* style Page Blogs */
 
 
 
