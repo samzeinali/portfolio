@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header id="header" class="header"></header>
-    <section id="navigation-mobile" class="navigation-mobile"></section>
     <section id="sidebar" class="sidebar"></section>
     <main class="main">
         <section id="home" class="home">
@@ -346,7 +344,7 @@
                 </div>
                 <div class="contact__elment">
                     <div class="contact__elment-icon">
-                        <i class="fa fa-whatsapp"></i>
+                        <i class="fa fa-whatsapp whatsapp-contact"></i>
                     </div>
                     <div class="contact__elment-content">
                         <h3 class="contactElement-title">واتس آپ</h3>
@@ -367,6 +365,42 @@
                     <textarea name="textarea" id="contact-text" cols="30" rows="10" class="contact__form-textarea">پیام خود را بنویسید ...</textarea>
                     <button class="contact__form-button">ارسال پیام</button>
                 </form>
+            </div>
+        </section>
+        <div class="headerMobile__bar">
+            <div class="bars"></div>
+            <div class="bars"></div>
+            <div class="bars"></div>
+        </div>
+        <div class="headerMobile__close">
+            <i class="fa fa-close"></i>
+        </div>
+        <section class="header">
+            <div class="header__image">
+                <img src="./assets/image/2.webp" alt="" class="header__image-img">
+            </div>
+            <div class="header__title">
+                <h2 class="header__title-text">توسعه دهنده فرانت اند</h2>
+            </div>
+            <div class="header__navigation">
+                <div class="header__nav"><i class="fa fa-home"></i><p class="nav-text">خانه</p></div>
+                <div class="header__nav"><i class="fa fa-user"></i><p class="nav-text">درباره.من</p></div>
+                <div class="header__nav"><i class="fa fa-vcard"></i><p class="nav-text">رزومه</p></div>
+                <div class="header__nav"><i class="fa fa-clone"></i><p class="nav-text">کارها</p></div>
+                <div class="header__nav"><i class="fa fa-quote-left"></i><p class="nav-text">بلاگ</p></div>
+                <div class="header__nav"><i class="fa fa-comments-o"></i><p class="nav-text">تماس</p></div>
+            </div>
+            <div class="home__socialBox">
+                <div class="home__socialBox-socials" id="social-tel"><i class="fa fa-telegram socialIcon"></i></div>
+                <div class="home__socialBox-socials" id="social-watsapp"><i class="fa fa-whatsapp socialIcon"></i></div>
+                <div class="home__socialBox-socials" id="social-instagram"><i class="fa fa-instagram socialIcon"></i></div>
+                <div class="home__socialBox-socials" id="social-github"><i class="fa fa-github socialIcon"></i></div>
+            </div>
+        </section>
+        <section id="navigation-mobile" class="navigation__mobile">
+            <div class="next-prevBox">
+                <div class="navigation__nextpage"><i class="fa fa-angle-right"></i></div>
+                <div class="navigation__prepage"><i class="fa fa-angle-left"></i></div>
             </div>
         </section>
     </main>
