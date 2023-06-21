@@ -82,6 +82,7 @@ body {
     height: 100vh;
     padding: 15px;
     position: relative;
+    overflow: hidden;
 }
 
 /* home section styles  */
@@ -96,6 +97,8 @@ body {
     display: flex;
     align-items: center;
     flex-flow: column;
+    animation-name: notanime;
+    animation-duration: 1.7s;
 }
 .home__image {
     margin-top: 50px;
@@ -182,43 +185,15 @@ body {
     flex-flow: column;
     overflow-y: scroll;
     overflow-x: hidden;
-}
-.about__image {
-    width: 90%;
-    margin-top: 30px;
-    position: relative;
-    display: none;
-    justify-content: end;
-    padding-left: 20px;
-    padding-top: 30px;
-}
-.about__image-border {
-    width: 83%;
-    height: 65%;
-    border: 2px solid var(--color-warning-darken);
-    position: absolute;
-    top: 5px;
-    margin-left: 40px;
-    border-radius: 30px;
-    border-bottom-right-radius: 0;
-}
-.about__image-img {
-    z-index: 2;
-    width: 100%;
-}
-.image-me {
-    width: 90%;
-    height: 70%;
-    margin-right: 10%;
-    border-radius: 30px;
-    border-bottom-right-radius: 0;
+    animation-name: notanime;
+    animation-duration: 1.7s;
 }
 .about__title {
     display: flex;
     width: 100%;
     flex-flow: row;
     padding: 15px 25px;
-    margin-top: -35%;
+    margin-top: 10px;
 }
 .about__title-text {
     font-family: var(--font-family-title);
@@ -433,6 +408,8 @@ body {
     overflow-x: hidden;
     padding: 20px 20px;
     display: none;
+    animation-name: notanime;
+    animation-duration: 1.7s;
 }
 .resume__services {
     width: 100%;
@@ -644,6 +621,8 @@ body {
     overflow-x: hidden;
     padding: 20px 20px;
     display: none;
+    animation-name: notanime;
+    animation-duration: 1.7s;
 }
 .work__title {
     display: flex;
@@ -748,6 +727,8 @@ body {
     overflow-x: hidden;
     padding: 20px 20px;
     display: none;
+    animation-name: notanime;
+    animation-duration: 1.7s;
 }
 .blog__title {
     width: 100%;
@@ -840,6 +821,8 @@ body {
     overflow-x: hidden;
     padding: 20px 20px;
     display: none;
+    animation-name: notanime;
+    animation-duration: 1.7s;
 }
 .contact__title {
     width: 100%;
@@ -850,7 +833,7 @@ body {
     padding-top: 10px;
 }
 .contact__title-text {
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-family: var(--font-family-title);
     font-weight: 500;
     color: var(--color-warning-darken);
@@ -876,7 +859,7 @@ body {
     height: 100%;
 }
 .fa-envelope-open-o {
-    font-size: 5rem !important;
+    font-size: 4rem !important;
     color: var(--color-warning-darken);
 
 }
@@ -888,7 +871,7 @@ body {
 .contactElement-title {
     width: 100%;
     font-family: var(--font-family-text);
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: 500;
     padding-bottom: 5px;
     color: var(--color-warning-darken);
@@ -898,7 +881,7 @@ body {
     font-family: var(--font-family-text);
     font-weight: 300;
     line-height: 3rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--color-gray-500);
 }
 .fa-phone {
@@ -910,7 +893,7 @@ body {
     color: var(--color-warning-darken);
 }
 .whatsapp-contact {
-    font-size: 5rem !important;
+    font-size: 4rem !important;
     color: var(--color-warning-darken);
 }
 .contact__form {
@@ -1039,14 +1022,6 @@ body {
     animation-name: notanime;
     animation-duration: 1.7s;
 }
-@keyframes example {
-    from {scale: 0;}
-    to {scale: 1;}
-  }
-  @keyframes exampleOut {
-    from {scale: 1;}
-    to {scale: 0;}
-  }
 .header__image {
     margin-top: 50px;
     border-radius: 100%;
@@ -1160,6 +1135,45 @@ body {
 .fa-angle-left {
     font-size: 2.4rem !important;
 }
+
+/* animations */
+
+@keyframes zoom-in {
+    from {scale: 0.2;}
+    to {scale: 1;}
+  }
+@keyframes zoom-0ut {
+    from {scale: 1;}
+    to {scale: 0.3;}
+  }
+@keyframes zoom-bottom {
+    0% {scale: 0.2;margin-top:400px; opacity: 0.3;}
+    25% {margin-top: 5px;}
+    100% {scale: 1;margin-top:0px; opacity: 1;}
+  }
+@keyframes unzoom-bottom {
+    0% {scale: 1;margin-top:0px;opacity: 1;}
+    40% {margin-top: 50px;}
+    100% {scale: 0.2;margin-top:400px; opacity: 0.3;}
+}
+@keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+@keyframes fade-out {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+@keyframes enter {
+    0% {position: absolute; left: 100%; opacity: 0.2;}
+    99% {position: absolute; left: 0%; opacity: 0.9;}
+    100% {position: relative; left: 0%; opacity: 1;}
+  }
+@keyframes exit {
+    0% {position: absolute; left: 0%; opacity: 1;}
+    100% {position: absolute; left: 100%; opacity: 0.2;}
+  }
+
 
 /* break point respons 720 - 990 - 1280 */
 
