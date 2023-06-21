@@ -32,8 +32,8 @@
                 </button>
             </div>
             <div class="home__socialBox">
-                <div class="home__socialBox-socials" id="social-tel"><i class="fa fa-telegram socialIcon"></i></div>
-                <div class="home__socialBox-socials" id="social-watsapp"><i class="fa fa-whatsapp socialIcon"></i></div>
+                <div class="home__socialBox-socials" id="social-telegram"><i class="fa fa-telegram socialIcon"></i></div>
+                <div class="home__socialBox-socials" id="social-whatsapp"><i class="fa fa-whatsapp socialIcon"></i></div>
                 <div class="home__socialBox-socials" id="social-instagram"><i class="fa fa-instagram socialIcon"></i></div>
                 <div class="home__socialBox-socials" id="social-github"><i class="fa fa-github socialIcon"></i></div>
             </div>
@@ -240,19 +240,19 @@
                 <div class="work__separator-bold"></div>
             </div>
             <div class="work__cards">
-                <div class="workCard">
+                <div class="workCard" id="rose-project">
                     <div class="workCard__image"><a href="#" class="workCard__image-link"><img class="workCard__image-img" src="./assets/image/rose.jpg" alt="Rose"></a></div>
                     <div class="workCard__title"><h3 class="workCard__title-text">پروژه رز</h3></div>
                     <div class="workCard__description"><p class="workCard__description-text">این برگه طراحی شده به صورت رسپانسیو است.</p></div>
                 </div>
                 <div class="list-separatorOdd"></div>
-                <div class="workCard">
+                <div class="workCard" id="login-project">
                     <div class="workCard__image"><a href="#" class="workCard__image-link"><img class="workCard__image-img" src="./assets/image/loginpage.jpg" alt="loginPage"></a></div>
                     <div class="workCard__title"><h3 class="workCard__title-text">صفحه ورود</h3></div>
                     <div class="workCard__description"><p class="workCard__description-text">این برگه ورود کاملا رسپانسیو بوده و با جاوااسکریپت مقدار ورودی کاربر اعتبار سنجی می شود.</p></div>
                 </div>
                 <div class="list-separatorOdd"></div>
-                <div class="workCard">
+                <div class="workCard" id="betotur-project">
                     <div class="workCard__image"><a href="#" class="workCard__image-link"><img class="workCard__image-img" src="./assets/image/betotur.jpg" alt="betotur"></a></div>
                     <div class="workCard__title"><h3 class="workCard__title-text">توسعه و طراحی سایت</h3></div>
                     <div class="workCard__description"><p class="workCard__description-text">این سایت به وسیله یک کار گروهی طراحی و توسعه داده شده است.</p></div>
@@ -269,7 +269,7 @@
             </div>
             <div class="freeSpace"></div>
             <div class="blog__posts">
-                <div class="blog__posts-post">
+                <div class="blog__posts-post" id="post1">
                     <div class="post__image"><a href="" class="post__image-link"><img class="post__image-img" src="./assets/image/react-native.png" alt="react"></a></div>
                     <div class="post__date"><p class="post__date-text">25 خرداد 1402</p></div>
                     <div class="post__title"><h3 class="post__title-text">ری اکت چیست؟ + چرا React انتخاب مناسبی است؟!</h3></div>
@@ -278,7 +278,7 @@
                     </p></div>
                 </div>
                 <div class="list-separatorOdd"></div>
-                <div class="blog__posts-post">
+                <div class="blog__posts-post" id="post2">
                     <div class="post__image"><a href="" class="post__image-link"><img class="post__image-img" src="./assets/image/20221127-18-41-45-173.jpg" alt="figma"></a></div>
                     <div class="post__date"><p class="post__date-text">25 خرداد 1402</p></div>
                     <div class="post__title"><h3 class="post__title-text">چرا قبل از هرکاری باید به طراحی UI بپردازیم؟</h3></div>
@@ -287,7 +287,7 @@
                     </p></div>
                 </div>
                 <div class="list-separatorEven"></div>
-                <div class="blog__posts-post">
+                <div class="blog__posts-post" id="post3">
                     <div class="post__image"><a href="" class="post__image-link"><img class="post__image-img" src="./assets/image/seo-la-gi.jpg" alt="seo"></a></div>
                     <div class="post__date"><p class="post__date-text">26 خرداد 1402</p></div>
                     <div class="post__title"><h3 class="post__title-text">سئو چیست؟ چرا به سئو نیاز داریم؟!</h3></div>
@@ -296,7 +296,7 @@
                     </p></div>
                 </div>
                 <div class="list-separatorOdd"></div>
-                <div class="blog__posts-post">
+                <div class="blog__posts-post" id="post4">
                     <div class="post__image"><a href="" class="post__image-link"><img class="post__image-img" src="./assets/image/coding.png" alt="front-end"></a></div>
                     <div class="post__date"><p class="post__date-text">26 خرداد 1402</p></div>
                     <div class="post__title"><h3 class="post__title-text">فرانت اند چیست ؟ + وظایف توسعه دهنده فرانت اند</h3></div>
@@ -359,11 +359,11 @@
                     <div class="services__separator-line"></div>
                 </div>
                 <form action="" class="my-form">
-                    <input type="text" class="contact__form-input" name="name" placeholder="نام و نام خانوادگی ...">
-                    <input type="text" class="contact__form-input" name="email" placeholder="آدرس ایمیل ...">
-                    <input type="text" class="contact__form-input" name="phone" placeholder="شماره تماس ...">
-                    <textarea name="textarea" id="contact-text" cols="30" rows="10" class="contact__form-textarea">پیام خود را بنویسید ...</textarea>
-                    <button class="contact__form-button">ارسال پیام</button>
+                    <input type="text" class="contact__form-input" id="input-name" name="name" placeholder="نام و نام خانوادگی ...">
+                    <input type="text" class="contact__form-input" id="input-email" name="email" placeholder="آدرس ایمیل ...">
+                    <input type="text" class="contact__form-input" id="input-phone" name="phone" placeholder="شماره تماس ...">
+                    <textarea name="textarea" id="contact-text" cols="30" rows="10" id="input-text" class="contact__form-textarea">پیام خود را بنویسید ...</textarea>
+                    <button id="input-submit" class="contact__form-button">ارسال پیام</button>
                 </form>
             </div>
         </section>
@@ -383,12 +383,12 @@
                 <h2 class="header__title-text">توسعه دهنده فرانت اند</h2>
             </div>
             <div class="header__navigation">
-                <div class="header__nav"><i class="fa fa-home"></i><p class="nav-text">خانه</p></div>
-                <div class="header__nav"><i class="fa fa-user"></i><p class="nav-text">درباره.من</p></div>
-                <div class="header__nav"><i class="fa fa-vcard"></i><p class="nav-text">رزومه</p></div>
-                <div class="header__nav"><i class="fa fa-clone"></i><p class="nav-text">کارها</p></div>
-                <div class="header__nav"><i class="fa fa-quote-left"></i><p class="nav-text">بلاگ</p></div>
-                <div class="header__nav"><i class="fa fa-comments-o"></i><p class="nav-text">تماس</p></div>
+                <div class="header__nav" id = "goto-home"><i class="fa fa-home"></i><p class="nav-text">خانه</p></div>
+                <div class="header__nav" id = "goto-about"><i class="fa fa-user"></i><p class="nav-text">درباره.من</p></div>
+                <div class="header__nav" id = "goto-resume"><i class="fa fa-vcard"></i><p class="nav-text">رزومه</p></div>
+                <div class="header__nav" id = "goto-works"><i class="fa fa-clone"></i><p class="nav-text">کارها</p></div>
+                <div class="header__nav" id = "goto-blog"><i class="fa fa-quote-left"></i><p class="nav-text">بلاگ</p></div>
+                <div class="header__nav" id = "goto-contact"><i class="fa fa-comments-o"></i><p class="nav-text">تماس</p></div>
             </div>
             <div class="home__socialBox">
                 <div class="home__socialBox-socials" id="social-tel"><i class="fa fa-telegram socialIcon"></i></div>

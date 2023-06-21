@@ -187,7 +187,7 @@ body {
     width: 90%;
     margin-top: 30px;
     position: relative;
-    display: flex;
+    display: none;
     justify-content: end;
     padding-left: 20px;
     padding-top: 30px;
@@ -1036,7 +1036,17 @@ body {
     display: none;
     align-items: center;
     flex-flow: column;
+    animation-name: notanime;
+    animation-duration: 1.7s;
 }
+@keyframes example {
+    from {scale: 0;}
+    to {scale: 1;}
+  }
+  @keyframes exampleOut {
+    from {scale: 1;}
+    to {scale: 0;}
+  }
 .header__image {
     margin-top: 50px;
     border-radius: 100%;
