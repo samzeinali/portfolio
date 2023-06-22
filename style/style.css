@@ -1208,8 +1208,11 @@ body {
         height: 100vh;
     }
     .main,.home, .about, .resume, .works, .blog, .contact, .header {
-        width: 800px !important;
+        width: 700px !important;
         height: 100%;
+    }
+    .main {
+        overflow-y: hidden;
     }
     .navigation__mobile {
         display: none;
@@ -1245,9 +1248,6 @@ body {
     .headerDesctop__image-img {
         width: 80px;
     }
-    .headerDesctop__nav {
-        
-    }
     .headerDesctop__text {
         display: none;
     }
@@ -1263,11 +1263,12 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
     }
 }
 @media(min-width : 1080px) {
     .main,.home, .about, .resume, .works, .blog, .contact, .header {
-        width: 900px !important;
+        width: 850px !important;
     }
 }
 @media(min-width : 1280px) {

@@ -315,6 +315,8 @@ prePage_Button.addEventListener('click',()=> {
     }
 })
 
+// counter scores
+
 aboutPage.addEventListener("scroll",()=>{
     let scroll = aboutPage.scrollTop;
     const scoreRun = parseInt(localStorage.getItem("score"));
@@ -373,3 +375,87 @@ aboutPage.addEventListener("scroll",()=>{
         }
     }
 })
+
+// menue Desktop
+
+headerHomeDesktop.addEventListener('click',()=>{
+    if (localStorage.getItem("pagein") != "home") {
+        closePageIn();
+        showpage(homePage)
+        localStorage.setItem("pagein","home");
+        } else {
+            showpage(homePage);
+        }
+})
+headerAboutDesktop.addEventListener('click',()=>{
+    if (localStorage.getItem("pagein") != "about") {
+    closePageIn();
+    showpage(aboutPage)
+    localStorage.setItem("pagein","about");
+    } else {
+        showpage(aboutPage);
+    }
+})
+headerResumeDesktop.addEventListener('click',()=>{
+    if (localStorage.getItem("pagein") != "resume") {
+        closePageIn();
+        showpage(resumePage)
+        localStorage.setItem("pagein","resume");
+        } else {
+            showpage(resumePage);
+        }
+})
+headerWorksDesktop.addEventListener('click',()=>{
+    if (localStorage.getItem("pagein") != "works") {
+        closePageIn();
+        showpage(worksPage)
+        localStorage.setItem("pagein","works");
+        } else {
+            showpage(worksPage);
+        }
+})
+headerBlogDesktop.addEventListener('click',()=>{
+    if (localStorage.getItem("pagein") != "blog") {
+        closePageIn();
+        showpage(blogPage)
+        localStorage.setItem("pagein","blog");
+        } else {
+            showpage(blogPage);
+        }
+})
+headerContactDesktop.addEventListener('click',()=>{
+    if (localStorage.getItem("pagein") != "contact") {
+        closePageIn();
+        showpage(contactPage)
+        localStorage.setItem("pagein","contact");
+        } else {
+            showpage(contactPage);
+        }
+})
+
+
+const closePageIn = () => {
+    prepage = localStorage.getItem("pagein");
+    switch (prepage) {
+        case "home":
+            closepage(homePage);
+            break;
+        case "about":
+            closepage(aboutPage);
+            break;
+        case "resume":
+            closepage(resumePage);
+            break;
+        case "works":
+            closepage(worksPage);
+            break;
+        case "blog":
+            closepage(blogPage);
+            break;
+        case "contact":
+            closepage(contactPage);
+            break;
+        default:
+            break;
+    }
+}
