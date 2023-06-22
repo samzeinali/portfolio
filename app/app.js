@@ -21,6 +21,12 @@ let headerResume = $$.querySelector("#goto-resume");
 let headerWorks = $$.querySelector("#goto-works");
 let headerBlog = $$.querySelector("#goto-blog");
 let headerContact = $$.querySelector("#goto-contact");
+let headerHomeDesktop = $$.querySelector("#goto-home-desc");
+let headerAboutDesktop = $$.querySelector("#goto-about-desc");
+let headerResumeDesktop = $$.querySelector("#goto-resume-desc");
+let headerWorksDesktop = $$.querySelector("#goto-works-desc");
+let headerBlogDesktop = $$.querySelector("#goto-blog-desc");
+let headerContactDesktop = $$.querySelector("#goto-contact-desc");
 let Download_CV_Button = $$.querySelector(".home__downloadCV-button");
 let blogPost1 = $$.querySelector("#post1");
 let blogPost2 = $$.querySelector("#post2");
@@ -42,7 +48,6 @@ let betotur_Project = $$.querySelector("#betotur-project");
 let login_Project = $$.querySelector("#login-project");
 
 //  variables
-
 const pages = [homePage, aboutPage, resumePage, worksPage, blogPage, contactPage];
 localStorage.setItem("pagein","home");
 localStorage.setItem("score",0);
@@ -307,5 +312,64 @@ prePage_Button.addEventListener('click',()=> {
             break;
         default:
             break;
+    }
+})
+
+aboutPage.addEventListener("scroll",()=>{
+    let scroll = aboutPage.scrollTop;
+    const scoreRun = parseInt(localStorage.getItem("score"));
+    let html_score = 0;
+    let css_score = 0;
+    let js_score = 0;
+    let react_score = 0;
+    let vue_score = 0;
+    let next_score = 0;
+    let node_score = 0;
+    if (scroll > 650) {
+        if (!scoreRun) {
+            HTML_Score.style.width = "0";
+            JS_Score.style.width = "0";
+            REACT_Score.style.width = "0";
+            VUE_Score.style.width = "0";
+            NEXT_Score.style.width = "0";
+            NODE_Score.style.width = "0";
+            CSS_Score.style.width = "0";
+            setInterval(() => {
+                HTML_Score.style.width = html_score + "%";
+                CSS_Score.style.width = css_score + "%";
+                JS_Score.style.width = js_score + "%";
+                REACT_Score.style.width = react_score + "%";
+                VUE_Score.style.width = vue_score + "%";
+                NEXT_Score.style.width = next_score + "%";
+                NODE_Score.style.width = node_score + "%";
+                if (html_score == 90) {
+                    clearInterval()
+                } else {
+                    if (html_score < 91) {
+                        html_score += 1;
+                        console.log(html_score);
+                    }
+                    if (css_score < 81) {
+                        css_score += 1;   
+                    }
+                    if (js_score < 75) {
+                        js_score += 1;   
+                    }
+                    if (react_score < 65) {
+                        react_score += 1;   
+                    }
+                    if (vue_score < 70) {
+                        vue_score += 1;   
+                    }
+                    if (next_score < 60) {
+                        next_score += 1;   
+                    }
+                    if (node_score < 30) {
+                        node_score += 1;   
+                    }
+                }
+            }, 20);
+            localStorage.setItem("score",1);
+        }
     }
 })
